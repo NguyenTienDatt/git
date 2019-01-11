@@ -16,7 +16,7 @@
  * prints a message (or the formatted contents of the notice in the case of
  * SIDEBAND_PROGRESS) to stderr.
  */
-int diagnose_sideband(const char *me, char *buf, int len);
+int diagnose_sideband(const char *me, char *buf, int len, int die_on_error);
 
 void send_sideband(int fd, int band, const char *data, ssize_t sz, int packet_max);
 
