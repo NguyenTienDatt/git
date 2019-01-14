@@ -500,10 +500,8 @@ test_expect_success 'submit --shelve' '
 	)
 '
 
-last_shelve() {
-	change=$(p4 -G changes -s shelved -m 1 //depot/... | \
-		marshal_dump change)
-	echo $change
+last_shelve () {
+	p4 -G changes -s shelved -m 1 //depot/... | marshal_dump change
 }
 
 make_shelved_cl() {
